@@ -11,6 +11,21 @@
   margin: 0;
 }
 
+.layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
 .card {
   width: 400px;
   max-width: 90vw;
@@ -57,6 +72,24 @@
   color: #222;
 }
 
+/* Clickable (bannable) attribute values */
+.attr-clickable {
+  font: inherit;
+  border: none;
+  background: #efeafe;
+  color: #5a4bd6;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.attr-clickable:hover {
+  background: #e0d6ff;
+  transform: translateY(-1px);
+}
+
 .no-breed {
   margin: 0;
   padding: 16px 20px;
@@ -66,11 +99,77 @@
 .placeholder {
   padding: 130px 20px;
   text-align: center;
-}
-
-.placeholder {
   color: #888;
   font-size: 1.1rem;
+}
+
+/* Ban list panel */
+.ban-list {
+  width: 260px;
+  max-width: 90vw;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 16px 20px;
+  text-align: left;
+}
+
+.ban-list h2 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+}
+
+.ban-empty {
+  margin: 0;
+  color: #888;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.ban-chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ban-chip {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: inherit;
+  text-align: left;
+  background: #fff0f0;
+  color: #c0392b;
+  border: 1px solid #f3c4c0;
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.ban-chip:hover {
+  background: #ffe0e0;
+}
+
+.ban-chip-type {
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: #c0392b;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.ban-chip-x {
+  margin-left: auto;
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 .discover-btn {
